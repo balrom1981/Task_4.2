@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SearchManagerTest {
     TicketRepository repository = new TicketRepository();
-    private Ticket first = new Ticket(1, 6000, "DME", "LED", 90);
+    private Ticket first = new Ticket(1, 4000, "DME", "LED", 90);
     private Ticket second = new Ticket(2, 2000, "SVO", "LED", 95);
     private Ticket third = new Ticket(3, 3000, "LED", "AER", 150);
     private Ticket fourth = new Ticket(4, 4000, "DME", "AER", 120);
