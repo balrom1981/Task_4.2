@@ -1,8 +1,6 @@
 package ru.netology.manager;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ru.netology.domain.Product;
 import ru.netology.domain.Ticket;
 import ru.netology.repository.TicketRepository;
 
