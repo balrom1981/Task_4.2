@@ -33,23 +33,6 @@ class SearchManagerTest {
     }
 
     @Test
-    public void shouldSearchTwoCoincidence() {
-        repository.save(first);
-        repository.save(second);
-        repository.save(third);
-        repository.save(fourth);
-        repository.save(fifth);
-        repository.save(sixth);
-        SearchManager manager = new SearchManager(repository);
-
-        Ticket[] actual = manager.searchBy("DME", "LED");
-        Ticket[] expected = new Ticket[]{first, sixth};
-
-        assertArrayEquals(actual, expected);
-
-    }
-
-    @Test
     public void shouldSearchTwoCoincidenceSort() {
         repository.save(first);
         repository.save(second);
@@ -61,8 +44,6 @@ class SearchManagerTest {
 
         Ticket[] actual = manager.searchBy("DME", "LED");
         Ticket[] expected = new Ticket[]{sixth, first};
-
-        Arrays.sort(actual);
 
         assertArrayEquals(actual, expected);
 
