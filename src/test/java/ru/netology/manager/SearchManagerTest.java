@@ -27,6 +27,23 @@ class SearchManagerTest {
         repository.save(third);
         repository.save(fourth);
         repository.save(fifth);
+        repository.save(seventh);
+        SearchManager manager = new SearchManager(repository);
+        TicketByTimeComparator comparator = new TicketByTimeComparator();
+
+        Ticket[] actual = manager.searchBy("DME", "LED", comparator);
+        Ticket[] expected = new Ticket[]{seventh, first};
+
+        assertArrayEquals(actual, expected);
+    }
+
+    @Test
+    public void shouldSearchTreeCoincidenceSort() {
+        repository.save(first);
+        repository.save(second);
+        repository.save(third);
+        repository.save(fourth);
+        repository.save(fifth);
         repository.save(sixth);
         repository.save(seventh);
         SearchManager manager = new SearchManager(repository);
