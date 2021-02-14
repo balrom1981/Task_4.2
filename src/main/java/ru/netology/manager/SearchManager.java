@@ -9,7 +9,7 @@ import java.util.Comparator;
 
 public class SearchManager {
     private TicketRepository repository;
-
+    TicketByTimeComparator comparator = new TicketByTimeComparator();
     public SearchManager(TicketRepository repository) {
         this.repository = repository;
     }
